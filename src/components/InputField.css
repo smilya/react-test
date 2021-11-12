@@ -1,0 +1,10 @@
+.inputField {
+  display: inline-block;
+  width: 100%;  
+}
+
+.inputField input {
+  width: 100%;
+  outline: none;
+  border: none;
+}
