@@ -33,7 +33,8 @@ function App() {
           }}
         />
         <Button caption="Применить" onClick={() => {
-          const codeString = `${path}=${newValue}`;
+          const clearPath = path.replace(/['"]/g, '');
+          const codeString = `${clearPath}=${newValue}`;
           const newContent = getNewContent(content, codeString);
           setContent(newContent)
         }} />
