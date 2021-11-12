@@ -11,7 +11,9 @@ function App() {
   const [path, setPath] = useState('');
   const [newValue, setNewValue] = useState('');
 
-  function getNewContent(oldContent, codeString) {
+  function getNewContent(oldContent, path, newValue) {
+    const clearPath = path.replace(/['"]/g, '');
+    const codeString = `${clearPath}=${newValue}`;
     const content = [...oldContent];
     eval(codeString)
     return content;
@@ -33,9 +35,7 @@ function App() {
           }}
         />
         <Button caption="Применить" onClick={() => {
-          const clearPath = path.replace(/['"]/g, '');
-          const codeString = `${clearPath}=${newValue}`;
-          const newContent = getNewContent(content, codeString);
+          const newContent = getNewContent(content, path, newValue);
           setContent(newContent)
         }} />
       </div>
