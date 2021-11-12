@@ -3,7 +3,7 @@ const content = [
 		type: 'panel',
 		props: {
 			width: 500,
-			height: 200,
+			height: 100,
 			visible: true
 		},
 	},
@@ -18,10 +18,10 @@ const content = [
 		type: 'button',
 		props: {
 			width: 100,
-			height: 50,
+			height: 40,
 			visible: true
 		},
-	}
+	}, 	
 ]
 
 export default content

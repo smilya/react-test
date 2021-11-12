@@ -1,9 +1,9 @@
 import './Content.css';
 import Button from './Button';
 import Label from './Label';
+import Panel from './Panel';
 
 const Content = ({ content }) => {
-
   function renderElems(elem) {
     if (elem.type === 'button') {
       return <Button {...elem.props} />;
@@ -12,7 +12,7 @@ const Content = ({ content }) => {
       return <Label {...elem.props} />;
     }
     if (elem.type === 'panel') {
-      return <div>panel</div>;
+      return <Panel {...elem.props} content={elem.content} />;
     }
     return null;
   }
