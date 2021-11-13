@@ -1,3 +1,7 @@
 .Content ul {
   list-style-type: none;
 }
+
+.Content ul li:not(:last-child) {
+  margin-bottom: 10px;
+}

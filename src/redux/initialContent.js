@@ -10,7 +10,7 @@ const content = [
   {
     type: "label",
     props: {
-      caption: "test",
+      caption: "label caption",
       visible: true,
     },
   },
