@@ -1,14 +1,19 @@
-import Content from "./Content";
-import './Panel.css';
+import "./Panel.css";
+import  Content from "./Content";
 
-const Panel = ({content=[], width, height, visible=true}) => {
-  return <div className='Panel' style={{
-    width: `${width}px`,
-    height: `${height}px`,
-    visibility: visible ? 'visible' : 'hidden',
-  }}>
-    <Content content={content} />
-  </div>
-}
+const Panel = ({ content, width, height, visible = true }) => {
+  return (
+    <div
+      className="Panel"
+      style={{
+        width: `${width}px`,
+        height: `${height}px`,
+        visibility: visible ? "visible" : "hidden",
+      }}
+    >
+      <Content content={content} />
+    </div>
+  );
+};
 
 export default Panel;

@@ -1,9 +1,8 @@
-import './Content.css';
-import Button from './Button';
-import Label from './Label';
-import Panel from './Panel';
+import Button from "./Button";
+import Label from "./Label";
+import Panel from "./Panel";
 
-const Content = ({content}) => {
+const Contents = ({content}) => {
   function renderElems(elem) {
     if (elem.type === 'button') {
       return <Button {...elem.props} />;
@@ -16,7 +15,8 @@ const Content = ({content}) => {
     }
     return null;
   }
-  if (!content || !content.length) return null;
+
+  if (!content ||!content.length) return null;
   return (
     <div className="Content">
       <ul>
@@ -25,7 +25,7 @@ const Content = ({content}) => {
         ))}
       </ul>
     </div>
-  );
-};
+  )
+}
 
-export default Content;
+export default Contents;

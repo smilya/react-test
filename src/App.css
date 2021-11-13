@@ -5,7 +5,7 @@
   height: 100vh;
 }
 
-.App .content {
+.App .contentContainer {
   flex-grow: 1;
   background-color: #fff;
 }
