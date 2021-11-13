@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
-import InputField from './components/InputField';
-import Button from './components/Button';
+import Inputs from './components/Inputs';
 import Content from './components/Content';
 
 import initialContent from './redux/initialContent';
@@ -19,9 +18,10 @@ function App() {
     return content;
   }
 
-  return (
+  return (    
     <div className="App">
-      <div className="header">
+      <Inputs />
+      {/* <div className="header">
         <InputField
           label="Путь"
           onChange={e => {
@@ -38,7 +38,7 @@ function App() {
           const newContent = getNewContent(content, path, newValue);
           setContent(newContent)
         }} />
-      </div>
+      </div> */}
       <div className="content">
         <Content content={content} />
       </div>

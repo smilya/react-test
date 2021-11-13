@@ -1,0 +1,9 @@
+.inputsContainer {
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 10px;
+}
+
+.inputsContainer .inputField {
+  margin-right: 2vw;
+}
