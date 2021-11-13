@@ -1,9 +1,15 @@
-const Button = ({ caption='button', width, height, visible = true, onClick }) => (
+const Button = ({
+  caption = "button",
+  width,
+  height,
+  visible = true,
+  onClick,
+}) => (
   <button
     style={{
       width: `${width}px`,
       height: `${height}px`,
-      visibility: visible ? 'visible' : 'hidden',
+      visibility: visible ? "visible" : "hidden",
     }}
     onClick={onClick}
   >

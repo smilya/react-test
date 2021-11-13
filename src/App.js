@@ -1,13 +1,12 @@
-import React from 'react';
-import './App.css';
-import Inputs from './components/Inputs';
-import ContentConnected from './components/ContentConnected';
-
+import React from "react";
+import "./App.css";
+import InputsConnected from "./components/InputsConnected";
+import ContentConnected from "./components/ContentConnected";
 
 function App() {
-  return (    
+  return (
     <div className="App">
-      <Inputs />
+      <InputsConnected />
       <div className="contentContainer">
         <ContentConnected />
       </div>

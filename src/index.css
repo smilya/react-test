@@ -4,7 +4,8 @@
   box-sizing: border-box;
 }
 
-body {
+#root {
   background-color: lightgray;
+  max-width: 1000px;
+  margin: 0 auto;
 }
-

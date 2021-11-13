@@ -1,5 +1,5 @@
 import "./Panel.css";
-import  Content from "./Content";
+import Content from "./Content";
 
 const Panel = ({ content, width, height, visible = true }) => {
   return (

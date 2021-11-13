@@ -1,7 +1,6 @@
 import InputField from "./InputField";
 import Button from "./Button";
 import "./Inputs.css";
-import { connect } from "react-redux";
 
 const Inputs = ({
   path,
@@ -28,14 +27,4 @@ const Inputs = ({
   );
 };
 
-const mapStateToProps = state => state.inputs;
-const mapDispatchToProps = dispatch => ({
-  changePath: e =>
-    dispatch({ type: "SET_PATH", payload: e.target.value }),
-  changeNewValue: e =>
-    dispatch({ type: "SET_NEW_VALUE", payload: e.target.value }),
-  updateContent: (path, newValue) =>
-    dispatch({ type: "UPDATE_CONTENT", payload: { path, newValue } }),
-});
-
-export default connect(mapStateToProps, mapDispatchToProps)(Inputs);
+export default Inputs;

@@ -1,17 +1,17 @@
-import './Content.css';
-import Button from './Button';
-import Label from './Label';
-import Panel from './Panel';
+import "./Content.css";
+import Button from "./Button";
+import Label from "./Label";
+import Panel from "./Panel";
 
-const Content = ({content}) => {
+const Content = ({ content }) => {
   function renderElems(elem) {
-    if (elem.type === 'button') {
+    if (elem.type === "button") {
       return <Button {...elem.props} />;
     }
-    if (elem.type === 'label') {
+    if (elem.type === "label") {
       return <Label {...elem.props} />;
     }
-    if (elem.type === 'panel') {
+    if (elem.type === "panel") {
       return <Panel {...elem.props} content={elem.content} />;
     }
     return null;
