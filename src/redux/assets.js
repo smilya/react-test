@@ -1,16 +1,19 @@
 function deepClone(instance) {
-  if (Array.isArray(instance)) {
-    const cloneArr = [];
-    for (const j of instance) {
-      const item = deepClone(j);
-      cloneArr.push(item);
-    }
+  if (instance instanceof Array) {
+    const cloneArr = [...instance];
+    for (let i=0; i < cloneArr.length; i++) {
+      if (cloneArr[i] instanceof Object) {
+        cloneArr[i] = deepClone(instance[i])
+      }
+    }  
     return cloneArr
   } 
   if (instance instanceof Object) {
-    const cloneObj = {}
-    for (const j in instance) {
-      cloneObj[j] = deepClone(instance[j])
+    const cloneObj = {...instance}
+    for (const j in cloneObj) {
+      if (cloneObj[j] instanceof Object) {
+        cloneObj[j] = deepClone(instance[j])
+      }
     }
     return cloneObj;
   }
